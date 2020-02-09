@@ -1,0 +1,73 @@
+<div class="login-content" lnc-loading="{{rc.isLoading}}">
+    <h1>Register</h1>
+
+    <form class="login-form" name="rc.form" novalidate="novalidate"
+          data-ng-submit="rc.form.$valid && rc.submit(rc.account)">
+        <div class="alert alert-danger" role="alert" ng-show="rc.errors.length > 0">
+            <ul>
+                <li data-ng-repeat="error in rc.errors">
+                    <strong>{{error.name}}</strong> {{error.message}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="alert alert-danger" ng-if="rc.errorStatus === 412">
+            <span>Invalid Captcha</span>
+        </div>
+
+        <lnc-form-group>
+            <label class="control-label visible-ie8 visible-ie9">Email</label>
+
+            <div class="input-icon">
+                <i class="fa fa-user"></i>
+                <input class="form-control placeholder-no-fix" type="email" data-ng-model="rc.account.email"
+                       placeholder="Email" name="email" required="required">
+            </div>
+
+        </lnc-form-group>
+        <lnc-form-group>
+            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+            <label class="control-label visible-ie8 visible-ie9">Password</label>
+
+            <div class="input-icon">
+                <i class="fa fa-lock"></i>
+                <input class="form-control placeholder-no-fix" type="password" data-ng-model="rc.account.password"
+                       placeholder="Password" name="password" required="required" aria-required="true">
+            </div>
+        </lnc-form-group>
+        <lnc-form-group>
+            <label class="control-label visible-ie8 visible-ie9">Password</label>
+
+            <div class="input-icon">
+                <i class="fa fa-check"></i>
+                <input class="form-control placeholder-no-fix" type="password" data-ng-model="rc.account.rpassword"
+                       placeholder="Retype Password" name="rpassword" required="required" aria-required="true">
+            <span class="help-block"
+                  data-ng-show="rc.account.rpassword != rc.account.password && rc.form.rpassword.$dirty">
+                Password and Retype Password not same.
+            </span>
+            </div>
+        </lnc-form-group>
+        <div class="row">
+            <div class="col-md-6">
+                <captcha></captcha>
+            </div>
+            <div class="col-md-6">
+                <lnc-form-group>
+                    <label class="control-label visible-ie8 visible-ie9">Captcha</label>
+                    <input type="text" class="form-control form-control-solid placeholder-no-fix" required
+                           name="captcha" placeholder="Captcha"
+                           data-ng-model="rc.account.captcha">
+                </lnc-form-group>
+            </div>
+        </div>
+        <p class="help-block"> By click sign up you agree to the <a href="#">
+            Terms of Service </a> and <a href="#"> Privacy Policy </a>
+        </p>
+        <br/>
+        <div class="form-actions" style="text-align: left">
+            <lnc-btn-back data-ui-sref="account.login"></lnc-btn-back>
+            <button type="submit" class="btn btn-success uppercase pull-right">Sign Up</button>
+        </div>
+    </form>
+</div>

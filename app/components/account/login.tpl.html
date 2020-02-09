@@ -1,0 +1,80 @@
+<div class="login-content" lnc-loading="{{loginCtrl.isLoading}}">
+    <h1>System Login</h1>
+
+    <p> Easily manage your company, customer, order, inventory. Many tools integrated that make you
+        feel more happy with
+        your business </p>
+
+    <form class="login-form" name="loginCtrl.form" novalidate
+          ng-submit="loginCtrl.form.$valid && loginCtrl.submit(loginCtrl.user)">
+
+        <div class="alert alert-danger" ng-if="loginCtrl.error === 404 || loginCtrl.error === 400
+        || loginCtrl.error === 401 || loginCtrl.error === 412">
+            <span ng-if="loginCtrl.error === 404 || loginCtrl.error === 400">Invalid username or password. </span>
+            <span ng-if="loginCtrl.error === 401">You account is not active. Please check email inbox and activate your account.</span>
+            <span ng-if="loginCtrl.error === 412">Invalid Captcha</span>
+        </div>
+
+
+        <div class="form-body">
+            <div class="row">
+                <div class="col-xs-6">
+                    <lnc-form-group>
+                        <label class="control-label visible-ie8 visible-ie9">Username</label>
+
+                        <input class="form-control form-control-solid placeholder-no-fix" type="email"
+                               data-ng-model="loginCtrl.user.username"
+                               ng-model-options="{debounce: 500}"
+                               autocomplete="off" placeholder="Username" name="username" required/>
+                    </lnc-form-group>
+                </div>
+                <div class="col-xs-6">
+                    <lnc-form-group>
+                        <label class="control-label visible-ie8 visible-ie9">Password</label>
+
+                        <input
+                                class="form-control form-control-solid placeholder-no-fix" type="password"
+                                data-ng-model="loginCtrl.user.password"
+                                autocomplete="off" placeholder="Password" name="password" required="required"
+                                ng-model-options="{debounce: 500}"/>
+                    </lnc-form-group>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <captcha></captcha>
+                </div>
+                <div class="col-md-6">
+                    <lnc-form-group>
+                        <label class="control-label visible-ie8 visible-ie9">Captcha</label>
+                        <input type="text" class="form-control form-control-solid placeholder-no-fix" required
+                               name="captcha" placeholder="Captcha"
+                               data-ng-model="loginCtrl.user.j_captcha">
+                    </lnc-form-group>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label class="checkbox">
+                        <input type="checkbox" icheck='{"check": 1, "uncheck": 0}'
+                               data-ng-model="loginCtrl.user.lnc_remember_me"
+                               name="lnc_remember_me"/>
+                        Remember me
+                    </label>
+                </div>
+                <div class="col-sm-8 text-right">
+                    <button type="submit" class="btn blue">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="row" style="margin-top: 50px">
+        <div class="col-md-6 col-md-offset-3">
+            <a class="btn yellow-gold btn-block btn-outline" ui-sref="account.register">Create New Account</a>
+        </div>
+    </div>
+</div>

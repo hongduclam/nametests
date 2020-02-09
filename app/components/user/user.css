@@ -1,0 +1,11 @@
+.user-item > * {
+    vertical-align: middle;
+}
+
+.user-item .name {
+    max-width: 10em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}

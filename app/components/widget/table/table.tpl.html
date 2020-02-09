@@ -1,0 +1,69 @@
+<div class="lnc-table">
+    <div class="row">
+        <div class="col-md-4 search" ng-if="tb.options.search.global">
+            <div class="input-group">
+                <input type="text" class="form-control global-search" data-ng-model="tb.searches.global"
+                       ng-model-options="{debounce: 500}" data-ng-change="tb.searchChange()"
+                       placeholder="{{searchGlobalPlaceholder}}"/>
+
+                <div class="input-group-btn dropdown search-dropdown">
+                    <button type="button" class="btn-filter btn dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false" data-ng-if="tb.options.search.detail == 'panel'">
+                        <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right detail-search" role="menu"
+                         data-ng-if="tb.options.search.detail == 'panel'">
+                        <div class="form-wrapper">
+
+                        </div>
+                    </div>
+                    <button type="button" class="btn yellow" data-ng-click="tb.searchChange()">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-condensed table-bordered table-hover" lnc-loading="{{tb.isLoading}}">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right" data-ng-if="tb.pagination.totalRecords == 0">Not found !</div>
+            <div class="lnc-pagination pull-right" data-ng-if="tb.pagination.totalRecords > 0">
+                <span class="paging-item">Page</span>
+                <a class="btn default btn-sm paging-item page-previous" data-ng-click="tb.previousPage()">
+                    <i class="fa fa-angle-left fa-fw"></i>
+                </a>
+                <input class="form-control paging-item page-input" type="number" maxlength="5"
+                       data-ng-model="tb.pagination.page"
+                       ng-model-options="{debounce: 500}"
+                       data-ng-disabled="tb.pagination.totalPage == 1"
+                       data-ng-change="tb.toPage()">
+                <a class="btn btn-sm default paging-item page-next" data-ng-click="tb.nextPage()">
+                    <i class="fa fa-angle-right fa-fw"></i>
+                </a>
+
+                <div class="paging-item page-total">&nbsp;of {{tb.pagination.totalPage}},</div>
+                <div class="paging-item">View</div>
+                <select class="form-control paging-item page-view"
+                        data-ng-model="tb.pagination.itemsPerPage"
+                        data-ng-change="tb.searchChange()">
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+
+                <div class="paging-item records-total">&nbsp;of
+                    <span>{{tb.pagination.totalRecords}} record(s)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

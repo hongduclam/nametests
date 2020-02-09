@@ -1,0 +1,7 @@
+[ui-view].ng-leave {
+    display: none;
+}
+
+[ui-view].ng-leave-active {
+    display: none;
+}

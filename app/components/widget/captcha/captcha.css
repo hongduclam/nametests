@@ -1,0 +1,16 @@
+.captcha {
+    width: 100%;
+    display: table;
+}
+
+table.captcha tr th, table.captcha tr td {
+    vertical-align: top;
+}
+
+.captcha img {
+    display: table-cell;
+}
+
+.captcha button {
+    display: table-cell;
+}

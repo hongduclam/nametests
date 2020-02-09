@@ -1,0 +1,15 @@
+<form novalidate name="mp.form" lnc-loading="{{vm.isLoading}}">
+    <lnc-form-group>
+        <div class="checkbox">
+            <label><input type="checkbox" icheck='{"check": 1, "uncheck": 0}' ng-model="mp.properties.shareType">
+                Sharing </label>
+        </div>
+        <span class="help-block">
+            Sharing folder, so every user on your company can do anything on this folder, but cannot Delete.
+        </span>
+    </lnc-form-group>
+    <div class="form-actions">
+        <lnc-btn-save ng-click="mp.submit(mp.properties)"></lnc-btn-save>
+        <lnc-btn-close ng-click="mp.$dismiss()"></lnc-btn-close>
+    </div>
+</form>

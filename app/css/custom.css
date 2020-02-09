@@ -1,0 +1,80 @@
+/* here you can put your own css to customize and override the theme */
+.page-container-bg-solid .page-title {
+    margin-top: 0px;
+}
+
+.page-container-bg-solid .page-bar {
+    background-color: transparent;
+}
+
+.page-header.navbar .hor-menu .navbar-nav > li.active > a > i, .page-header.navbar .hor-menu .navbar-nav > li.active > a > i,
+.page-header.navbar .hor-menu .navbar-nav > li.current > a > i, .page-header.navbar .hor-menu .navbar-nav > li.current > a > i {
+    color: white;
+}
+
+.email-item button {
+    display: none;
+}
+
+.email-item:hover button {
+    display: inline-block;
+}
+
+.email-item a {
+    display: none;
+}
+
+.email-item:hover a {
+    display: inline-block;
+}
+
+.email-item .form-group {
+    vertical-align: top;
+}
+
+.lnc-fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -ms-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+
+.lnc-fade.in {
+    opacity: 1;
+}
+
+/**
+Modal has z-index: 10050
+*/
+.tooltip {
+    z-index: 10063;
+}
+
+.tooltip-inner {
+    max-width: 350px;
+}
+
+label.checkbox {
+    cursor: pointer;
+}
+
+/*
+    Overwrite padding for height of Portlet's Tab equals with normal portlet.
+*/
+.portlet > .portlet-title > .nav-tabs > li > a {
+    padding: 7px 10px 8px;
+}
+
+.form .form-section {
+    margin: 20px 0px;
+}
+
+.form .form-section:nth-of-type(1) {
+    margin: 0px 0px 20px 0px;
+}
+
+.sortable-ghost {
+    opacity: .7;
+}

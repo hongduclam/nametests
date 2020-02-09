@@ -1,0 +1,10 @@
+<div class="media-single-select preview">
+    <div class="image-holder" data-ng-click="chooseImage($event)">
+        <img lnc-thumbnail="{{image}}"/>
+    </div>
+    <div class="image-buttons" data-ng-if="image">
+        <button type="button" class="btn btn-sm red" data-ng-click="removeSingle($event)">
+            <i class="fa fa-trash-o"></i>
+        </button>
+    </div>
+</div>

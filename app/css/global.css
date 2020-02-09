@@ -1,0 +1,52 @@
+.lnc-icon:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 1.28571429em;
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+}
+
+.lnc-icon-address:before {
+    content: "\f041";
+}
+
+.lnc-icon-address:empty {
+    display: none;
+}
+
+.lnc-icon-phone:before {
+    content: "\f095";
+}
+
+.lnc-icon-phone:empty {
+    display: none;
+}
+
+.lnc-icon-email:before {
+    content: "\f003";
+}
+
+.lnc-icon-email:empty {
+    display: none;
+}
+
+.lnc-icon-fax:before {
+    content: "\f1ac";
+}
+
+.lnc-icon-fax:empty {
+    display: none;
+}
+
+.lnc-icon-website:before {
+    content: "\f08e";
+}
+
+.lnc-icon-website:empty {
+    display: none;
+}

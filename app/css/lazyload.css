@@ -1,0 +1,9 @@
+.lazyload {
+    opacity: 0;
+}
+
+.lazyloading {
+    opacity: 1;
+    transition: opacity 300ms;
+    background: #f7f7f7 url(../image/loading-spinner-grey.gif) no-repeat center;
+}

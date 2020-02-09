@@ -1,0 +1,25 @@
+<form name="vm.form" novalidate lnc-loading="{{vm.isLoading}}" data-ng-submit="vm.form.$valid && vm.save()">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="control-label">Question Content </label>
+                <textarea data-ng-disabled="true" name="description" placeholder="Question Content..." class="form-control"
+                          style="width: 100%; height: 8em" data-ng-model="vm.questionContent">
+                </textarea>
+            </div>
+            <lnc-form-group>
+                <label class="control-label">Content <span class="required">*</span>
+                </label>
+                 <textarea name="content" placeholder="Content..." class="form-control"
+                           style="width: 100%; height: 8em"
+                           maxlength="200" required="required"
+                           data-ng-model="vm.formData.content">
+                </textarea>
+            </lnc-form-group>
+        </div>
+    </div>
+    <div class="form-actions">
+        <lnc-btn-save type="submit"></lnc-btn-save>
+        <lnc-btn-close data-dismiss="modal"></lnc-btn-close>
+    </div>
+</form>

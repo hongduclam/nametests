@@ -1,0 +1,22 @@
+<div class="row" lnc-loading="{{vm.isLoading}}">
+    <div class="col-md-7">
+        <label> Canvas </label>
+        <canvas id="canvas" style="border: 1px solid"></canvas>
+        <br>
+        <textarea class="form-control" style="width: {{vm.data.imgSubWidth}}px; font-size: 17px" data-ng-model="vm.data.content"></textarea>
+       <br>
+        <button type="button" class="btn btn-default" data-ng-click="vm.addText(vm.data.content)">Add Text</button>
+        <button type="button" class="btn btn-default" data-ng-click="vm.removeText()">Remove Text</button>
+    </div>
+    <div class="col-md-5">
+        <label> Preview </label>
+        <div class="form-group">
+            <img src="{{vm.file}}" alt="" class="img-thumbnail"
+                 style="width: {{vm.data.imgSubWidth}}px; height:{{vm.data.imgSubHeight}}px">
+        </div>
+        <div class="form-action">
+            <button type="button" class="btn blue" data-ng-click="vm.preview()"> Preview </button>
+            <button type="button" class="btn blue" data-ng-click="vm.save()"> Save </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<lnc-portlet class="light" data-ng-if="dfm.questionData.id">
+    <portlet-caption>
+        <span class="caption-subject bold uppercase"> Data for filter question </span>
+    </portlet-caption>
+    <portlet-action>
+        <lnc-btn-create data-ng-click="dfm.create()"></lnc-btn-create>
+    </portlet-action>
+    <portlet-body>
+        <div class="row">
+            <lnc-table options="dfm.options" pipe="dfm.tableData" callback="dfm.callback(event, data)" api="dfm.gridApi">
+            </lnc-table>
+        </div>
+    </portlet-body>
+</lnc-portlet>
+

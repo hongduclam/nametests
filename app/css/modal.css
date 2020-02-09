@@ -1,0 +1,256 @@
+/* distance between stacked modals*/
+/* The first modal translateZ value*/
+.modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+/** Modal Primary */
+.modal.primary .portlet-title {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.modal.primary .portlet-title i {
+    color: #fff;
+}
+
+/** Modal Success */
+.modal.success .portlet-title {
+    color: #fff;
+    background-color: #45B6AF;
+    border-color: #3ea49d;
+}
+
+.modal.success .portlet-title i {
+    color: #fff;
+}
+
+/** Modal info */
+.modal.info .portlet-title i {
+    color: #fff;
+    background-color: #89C4F4;
+    border-color: #72b8f2;
+}
+
+.modal.info .portlet-title i {
+    color: #fff;
+}
+
+.modal .portlet > .portlet-title > .nav-tabs {
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+
+/** Modal warning */
+.modal.warning .portlet-title {
+    color: #fff;
+    background-color: #dfba49;
+    border-color: #dbb233;
+}
+
+.modal.warning .portlet-title i {
+    color: #fff;
+}
+
+/** Modal danger */
+.modal.danger .portlet-title {
+    background: #F3565D;
+    border-color: #f13e46;
+    color: #fff;
+}
+
+.modal.danger .portlet-title i {
+    color: #fff;
+}
+
+.modal .portlet > .portlet-title > .caption > .caption-helper {
+    color: #cccccc;
+    padding-left: 1.5em;
+}
+
+.modal .portlet {
+    margin-bottom: 0px;
+}
+
+.modal form .form-actions {
+    padding-top: 15px;
+    padding-bottom: 0px;
+    background: none;
+}
+
+.modal form .form-actions, form .form-actions {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: right;
+}
+
+.container {
+    margin: 5em auto;
+}
+
+.modal.in {
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    -o-perspective: 2000px;
+    perspective: 2000px;
+}
+
+.modal.in .modal-dialog.aside {
+    -webkit-transform: -340px;
+    -moz-transform: -340px;
+    -o-transform: -340px;
+    -ms-transform: -340px;
+    transform: -340px;
+    -webkit-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+    -ms-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+    transform: scale(0.8) rotateY(45deg) translateZ(-340px);
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.modal.in .modal-dialog.aside.aside-1 {
+    -webkit-transform: calc(-300px);
+    -moz-transform: calc(-300px);
+    -o-transform: calc(-300px);
+    -ms-transform: calc(-300px);
+    transform: calc(-300px);
+    -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+    -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+    transform: scale(0.8) rotateY(45deg) translateZ(calc(-300px));
+}
+
+.modal.in .modal-dialog.aside.aside-2 {
+    -webkit-transform: calc(-260px);
+    -moz-transform: calc(-260px);
+    -o-transform: calc(-260px);
+    -ms-transform: calc(-260px);
+    transform: calc(-260px);
+    -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+    -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+    transform: scale(0.8) rotateY(45deg) translateZ(calc(-260px));
+}
+
+.modal.in .modal-dialog.aside.aside-3 {
+    -webkit-transform: calc(-220px);
+    -moz-transform: calc(-220px);
+    -o-transform: calc(-220px);
+    -ms-transform: calc(-220px);
+    transform: calc(-220px);
+    -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+    -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+    transform: scale(0.8) rotateY(45deg) translateZ(calc(-220px));
+}
+
+.modal.in .modal-dialog.aside.aside-4 {
+    -webkit-transform: calc(-180px);
+    -moz-transform: calc(-180px);
+    -o-transform: calc(-180px);
+    -ms-transform: calc(-180px);
+    transform: calc(-180px);
+    -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+    -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+    transform: scale(0.8) rotateY(45deg) translateZ(calc(-180px));
+}
+
+.modal.in .modal-dialog.aside.aside-5 {
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(100% - 140px));
+    -webkit-transform: scale(0.8) rotateY(45deg) translateZ(calc(100% - 140px));
+    -ms-transform: scale(0.8) rotateY(45deg) translateZ(calc(100% - 140px));
+    -o-transform: scale(0.8) rotateY(45deg) translateZ(calc(100% - 140px));
+    transform: scale(0.8) rotateY(45deg) translateZ(calc(100% - 140px));
+}
+
+.modal.modal-fullscreen {
+    /* Maximize the main wrappers on the screen */
+    /* Make the parent wrapper of the modal box a full-width block */
+    /* Remove borders and effects on the content */
+    /**
+       * /!\ By using this feature, you force the header and footer to be placed
+       * in an absolute position. You must handle by yourself the margin of the
+       * content.
+       */
+}
+
+.modal.modal-fullscreen .modal-dialog,
+.modal.modal-fullscreen .modal-content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal.modal-fullscreen .modal-dialog {
+    margin: 0;
+    width: 100%;
+}
+
+.modal.modal-fullscreen .modal-content {
+    border: none;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: inherit;
+    -moz-box-shadow: inherit;
+    -o-box-shadow: inherit;
+    box-shadow: inherit;
+}
+
+.modal.modal-fullscreen.force-fullscreen {
+    /* Remove the padding inside the body */
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-body {
+    padding: 0;
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-header,
+.modal.modal-fullscreen.force-fullscreen .modal-footer {
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-header {
+    top: 0;
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-header .full-close {
+    background: transparent;
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-header .full-close i {
+    font-size: 1.3em;
+    color: #ccc;
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-header .full-close:focus i,
+.modal.modal-fullscreen.force-fullscreen .modal-header .full-close:hover i {
+    color: white;
+}
+
+.modal.modal-fullscreen.force-fullscreen .modal-footer {
+    bottom: 0;
+}
+
+.modal.modal-fullscreen.black .modal-content {
+    background: rgba(0, 0, 0, .5);
+}
+
+.modal.modal-fullscreen.black .modal-header {
+    border: 0;
+    color: #fff;
+}
+
+.modal.modal-fullscreen.black .modal-footer {
+    border-top: none;
+}

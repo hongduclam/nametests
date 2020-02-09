@@ -1,0 +1,14 @@
+<lnc-portlet class="light">
+    <portlet-caption>
+        <span class="caption-subject bold uppercase"> Question </span>
+        <span class="caption-helper">Manage Question information.</span>
+    </portlet-caption>
+    <portlet-action>
+        <lnc-btn-create data-ui-sref="cms.question.create"></lnc-btn-create>
+    </portlet-action>
+    <portlet-body>
+        <lnc-table options="qmc.options" pipe="qmc.tableData" callback="qmc.callback(event, data)" api="qmc.gridApi">
+        </lnc-table>
+    </portlet-body>
+</lnc-portlet>
+

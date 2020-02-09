@@ -1,0 +1,16 @@
+/*
+Custom css for ui-select
+*/
+
+table .ui-select-bootstrap .btn{
+    margin-right: 0px;
+}
+
+.ui-select-bootstrap span.ui-select-match-text{
+    /*width: 95%;*/
+    text-overflow: ellipsis;
+}
+
+.ui-select-bootstrap .dropdown-menu {
+    margin-top: 2px;
+}

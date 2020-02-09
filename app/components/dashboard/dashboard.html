@@ -1,0 +1,23 @@
+<lnc-portlet class="light">
+    <portlet-caption>
+        <span class="caption-subject bold uppercase">Dashboard</span>
+    </portlet-caption>
+    <portlet-action>
+        <lnc-btn-refresh isRefresh="dc.bsn.isRefresh" data-ng-click="dc.bsn.loadData()"></lnc-btn-refresh>
+    </portlet-action>
+    <portlet-body>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label sr-only">Logo</label>
+                    <lnc-media-single name="logo" data-ng-model="cpc.company.logo">
+                    </lnc-media-single>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+            </div>
+        </div>
+    </portlet-body>
+</lnc-portlet>

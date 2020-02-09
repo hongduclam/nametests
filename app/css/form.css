@@ -1,0 +1,29 @@
+.form-inline {
+    margin-bottom: 15px;
+}
+
+/*
+Form
+*/
+form .input-group .input-group-addon {
+    min-width: 5px;
+    padding: 4px 4px;
+}
+
+.form-group .navbar-form {
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-errors {
+
+}
+
+.form-errors ul {
+    list-style: none;
+    padding-left: 0.1em;
+}
+
+.form-errors ul li:before {
+    content: "-";
+}

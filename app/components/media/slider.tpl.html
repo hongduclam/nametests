@@ -1,0 +1,14 @@
+<div class="lnc-carousel">
+    <div class="lnc-preview">
+        <img src="{{sl.preview}}"/>
+    </div>
+    <div class="lnc-thumbnails" lnc-scroll="{axis: 'x', alwaysShowScrollbar: false, advanced: {updateOnContentResize: true}, autoHideScrollbar: true, snapAmount: 76, snapOffset: 0}">
+        <ul>
+            <li class="item" ng-class="{active: sl.selectedItem == $index}"
+                ng-repeat="i in sl.images track by $index"
+                ng-click="sl.sliderSelect($index, i)" >
+                <img lnc-thumbnail="{{i}}" class="img-responsive"/>
+            </li>
+        </ul>
+    </div>
+</div>

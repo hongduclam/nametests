@@ -1,0 +1,347 @@
+<div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu" data-slide-speed="200" data-auto-scroll="true">
+            <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+            <!-- DOC: This is mobile version of the horizontal menu. The desktop version is defined(duplicated) in the header above -->
+            <li class="sidebar-search-wrapper">
+                <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+                <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered
+                & solid search box -->
+                <lnc-header-search class="sidebar-search sidebar-search-bordered"></lnc-header-search>
+            </li>
+            <li class="nav-item" data-ng-class="{'active': $state.includes('erp.dashboard')}">
+                <a data-ui-sref="erp.dashboard">
+                    <i class="fa fa-home fa-fw"></i>
+                    Dashboard <span class="selected" data-ng-if="$state.includes('erp.dashboard')"> </span>
+                </a>
+            </li>
+            <li class="nav-item" data-ng-class="{'active': $state.includes('erp.mngt')}">
+                <a href="javascript:;" class="nav-item nav-toggle">
+                    <i class="fa fa-th fa-fw"></i>
+                    <span class="title">Management</span>
+                    <span class="arrow"> </span>
+                    <span class="selected" data-ng-if="$state.includes('erp.mngt.company')"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item"
+                        data-ng-class="{'active': $state.includes('erp.mngt.company')}"
+                        data-ng-if="hasAnyModule('company')">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="fa fa-building fa-fw"></i>
+                            <span class="title">Company</span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_profile')">
+                                <a data-ui-sref="erp.mngt.company.profile" class="nav-link">
+                                    <i class="fa fa-info fa-fw"></i>
+                                    <span class="title">Profile</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_profile')">
+                                <a data-ui-sref="erp.mngt.company.setting">
+                                    <i class="fa fa-cogs fa-fw"></i>
+                                    <span class="title">Setting</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_branch')">
+                                <a data-ui-sref="erp.mngt.company.branch">
+                                    <i class="fa fa-tags fa-fw"></i>
+                                    <span class="title">Branch</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_department')">
+                                <a data-ui-sref="erp.mngt.company.department">
+                                    <i class="fa fa-cubes fa-fw"></i>
+                                    <span class="title">Department</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_position')">
+                                <a data-ui-sref="erp.mngt.company.position">
+                                    <i class="fa fa-sitemap fa-fw"></i>
+                                    <span class="title">Position</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_staff')">
+                                <a data-ui-sref="erp.mngt.company.staff.main">
+                                    <i class="fa fa-users fa-fw"></i>
+                                    <span class="title">Staff</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('company_warehouse')">
+                                <a data-ui-sref="erp.mngt.company.warehouse">
+                                    <i class="fa fa-cubes fa-fw"></i>
+                                    <span class="title">Warehouse</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"
+                        data-ng-class="{'active': $state.includes('erp.mngt.product')}"
+                        data-ng-if="hasAnyModule('product')">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-handbag"></i>
+                            <span class="title"> Product </span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('product_type')">
+                                <a data-ui-sref="erp.mngt.product.type.main" class="nav-link">
+                                    <i class="fa fa-th-list fa-fw"></i>
+                                    <span class="title"> Product Type </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('product_metadata')">
+                                <a data-ui-sref="erp.mngt.product.metadata.main" class="nav-link">
+                                    <i class="fa fa-info fa-fw"></i>
+                                    <span class="title"> Product Metadata </span>
+                                </a>
+                            </li>
+                            <li data-ng-class="{'active': $state.includes('erp.mngt.product.main')}"
+                                data-ng-if="hasAnyPermission('product_detail')">
+                                <a data-ui-sref="erp.mngt.product.detail.main" class="nav-link">
+                                    <i class="fa fa-th-list fa-fw"></i>
+                                    <span class="title"> Product </span>
+                                </a>
+                            </li>
+                            <li data-ui-sref-active="active" data-ng-if="hasAnyPermission('product_category')"
+                                class="nav-link">
+                                <a data-ui-sref="erp.mngt.product.category.main">
+                                    <i class="fa fa-sitemap fa-fw"></i>
+                                    <span class="title"> Category </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Render INVENTORY -->
+                    <li class="nav-item" data-ng-class="{'active': $state.includes('erp.mngt.inventory')}"
+                        data-ng-if="hasAnyModule('warehouse')">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-handbag"></i>
+                            <span class="title"> Warehouse </span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('inventory_voucher')">
+                                <a data-ui-sref="erp.mngt.inventory.voucher" class="nav-link">
+                                    <i class="fa fa-files-o fa-fw"></i>
+                                    <span class="title"> Voucher </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('inventory_summary')">
+                                <a data-ui-sref="erp.mngt.inventory.main" class="nav-link">
+                                    <i class="fa fa-table fa-fw"></i>
+                                    <span class="title"> Inventory </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Warehouse -->
+
+                    <!-- Render CUSTOMER -->
+                    <li class="nav-item"
+                        data-ng-if="hasAnyModule('customer')"
+                        data-ng-class="{'active': $state.includes('erp.mngt.customer')}">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-earphones-alt"></i>
+                            <span class="title"> Customer Service</span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('customer_company_category')">
+                                <a data-ui-sref="erp.mngt.customer.category" class="nav-link">
+                                    <i class="fa fa-sitemap fa-fw"></i> Company Category
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('customer_company')">
+                                <a data-ui-sref="erp.mngt.customer.company.main" class="nav-link">
+                                    <i class="fa fa-building fa-fw"></i> Companies
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('customer_person')">
+                                <a data-ui-sref="erp.mngt.customer.person.main" class="nav-link">
+                                    <i class="fa fa-users fa-fw"></i> Person
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('customer_warrantyIn')">
+                                <a data-ui-sref="erp.mngt.customer.warrantyIn.main" class="nav-link">
+                                    <i class="fa fa-files-o fa-fw"></i> Warranty In
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('customer_warrantyOut')">
+                                <a data-ui-sref="erp.mngt.customer.warrantyOut.main" class="nav-link">
+                                    <i class="fa fa-files-o fa-fw"></i> Warranty Out
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- End CUSTOMER -->
+                    <!-- Render ACCOUNT -->
+                    <li class="nav-item"
+                        data-ng-if="hasAnyModule('accountant')"
+                        data-ng-class="{'active': $state.includes('erp.mngt.accountant')}">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-docs"></i>
+                            <span class="title"> Accountant </span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active" data-ng-if="hasAnyPermission('accountant_account')">
+                                <a data-ui-sref="erp.mngt.accountant.account"> List of Accounts </a>
+                            </li>
+                            <!--li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('accountant_tax')">
+                                <a data-ui-sref="erp.mngt.accountant.tax"> Tax </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('accountant_invoice')">
+                                <a data-ui-sref="erp.mngt.accountant.invoice">
+                                    <span class="title">Invoice</span>
+                                </a>
+                            </li-->
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('accountant_currency')">
+                                <a data-ui-sref="erp.mngt.accountant.currencyCompany" class="nav-link">
+                                    <i class="fa fa-usd fa-fw"></i>
+                                    <span class="title"> Currency </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('accountant_bank_account')">
+                                <a data-ui-sref="erp.mngt.accountant.bank.account">
+                                    <i class="fa fa-credit-card fa-fw"></i>
+                                    <span class="title"> Bank Account </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('accountant_bank_account')">
+                                <a data-ui-sref="erp.mngt.accountant.payment.main" class="nav-link">
+                                    <i class="fa fa-money fa-fw"></i>
+                                    <span class="title"> Money Transaction </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Render SALE -->
+                    <li class="nav-item"
+                        data-ng-if="hasAnyModule('sale')"
+                        data-ng-class="{'active': $state.includes('erp.mngt.sale')}">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="fa fa-sign-out fa-fw"></i>
+                            <span class="title"> Sale </span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('sale_quotation')">
+                                <a data-ui-sref="erp.mngt.sale.quotation.main" class="nav-link">
+                                    <i class="fa fa-comment-o fa-fw"></i>
+                                    <span class="title">Quotation</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('sale_order')">
+                                <a data-ui-sref="erp.mngt.sale.order.main" class="nav-link">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>
+                                    <span class="title">Sale Order</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('sale_contract')">
+                                <a data-ui-sref="erp.mngt.sale.contract.main">
+                                    <i class="fa fa-briefcase fa-fw"></i>
+                                    <span class="title">Sale Contract</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('sale_project')">
+                                <a data-ui-sref="erp.mngt.sale.project" class="nav-link">
+                                    <i class="fa fa-folder-open-o fa-fw"></i>
+                                    <span class="title">Project</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('sale_coupon')">
+                                <a data-ui-sref="erp.mngt.sale.coupon" class="nav-link">
+                                    <i class="fa fa-ticket fa-fw"></i>
+                                    <span class="title">Coupon</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('sale_payment_method')">
+                                <a data-ui-sref="erp.mngt.sale.paymentMethod" class="nav-link">
+                                    <i class="fa fa-credit-card fa-fw"></i>
+                                    <span class="title">Payment Method</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Render PURCHASE -->
+                    <li class="nav-item"
+                        data-ng-if="hasAnyModule('purchase')"
+                        data-ng-class="{'active': $state.includes('erp.mngt.purchase')}">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="fa fa-sign-in fa-fw"></i>
+                            <span class="title"> Purchase </span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('purchase_order')">
+                                <a class="nav-link" data-ui-sref="erp.mngt.purchase.order.main">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>
+                                    <span class="title"> Purchase Order </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('purchase_contract')">
+                                <a class="nav-link" data-ui-sref="erp.mngt.purchase.contract.main">
+                                    <i class="fa fa-briefcase fa-fw"></i>
+                                    <span class="title">Purchase Contract</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Render SYSTEM -->
+                    <li class="nav-item"
+                        data-ng-if="hasAnyModule('system')"
+                        data-ng-class="{'active': $state.includes('erp.mngt.system')}">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="fa fa-cog fa-fw"></i>
+                            <span class="title"> System </span>
+                            <span class="arrow"> </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('system_account')">
+                                <a data-ui-sref="erp.mngt.system.account">
+                                    <i class="fa fa-users fa-fw"></i>
+                                    <span class="title"> User </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-ui-sref-active="active"
+                                data-ng-if="hasAnyPermission('system_permission')">
+                                <a data-ui-sref="erp.mngt.system.group.main">
+                                    <i class="fa fa-user-secret fa-fw"></i>
+                                    <span class="title"> Group </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

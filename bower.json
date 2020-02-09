@@ -1,0 +1,123 @@
+{
+  "name": "admin-frontend",
+  "description": "About yourself Project",
+  "version": "2.0.0",
+  "homepage": "https://bitbucket.org/lenguyencorp/finance-frontend",
+  "license": "LNC",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-touch": "~1.4.8",
+    "angular-messages": "~1.4.8",
+    "angular-cookies": "~1.4.8",
+    "angular-translate": "~2.8.1",
+    "textAngular": "~1.4.6",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4",
+    "bootstrap": "~v3.3.7",
+    "iCheck": "~1.0.2",
+    "jstree": "~3.3.1",
+    "dropzone": "~4.2.0",
+    "cropper": "v1.0.0",
+    "blockUI": "2.70",
+    "jquery-backstretch": "2.0.4",
+    "toastr": "~2.1.2",
+    "select2": "4.0.2",
+    "select2-bootstrap-theme": "~0.1.0-beta.4",
+    "holderjs": "~v2.8.0",
+    "bootstrap-daterangepicker": "v2.1.13",
+    "malihu-custom-scrollbar-plugin": "~3.1.3",
+    "font-awesome": "^4.6.1",
+    "simple-line-icons": "~2.2.1",
+    "moment": "~2.10.6",
+    "moment-timezone": "~0.4.0",
+    "accounting.js": "master",
+    "lazysizes": "~1.3.1",
+    "typeahead.js": "~v0.11.1",
+    "Sortable": "~1.4.0",
+    "localforage": "~1.3.1",
+    "pusher": "3.1.0",
+    "pusher-angular": "0.1.9",
+    "lodash": "4.17.2"
+  },
+  "overrides": {
+    "pusher-angular": {
+      "dependencies": {
+        "pusher": "~3.1.0"
+      }
+    },
+    "angular": {
+      "dependencies": {
+        "jquery": "~2.1.4"
+      }
+    },
+    "dropzone": {
+      "main": [
+        "dist/min/dropzone.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    },
+    "simple-line-icons": {
+      "main": [
+        "css/simple-line-icons.css"
+      ]
+    },
+    "iCheck": {
+      "main": [
+        "icheck.min.js",
+        "skins/minimal/_all.css"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.css"
+      ]
+    },
+    "select2": {
+      "main": [
+        "dist/js/select2.js",
+        "dist/css/select2.min.css"
+      ]
+    },
+    "select2-bootstrap-theme": {
+      "dependencies": {
+        "select2": "~0.4.0",
+        "bootstrap": "~v3.3.5"
+      },
+      "main": [
+        "dist/select2-bootstrap.min.css"
+      ]
+    },
+    "textAngular": {
+      "main": [
+        "./dist/textAngular.js",
+        "./dist/textAngularSetup.js",
+        "./dist/textAngular.css"
+      ],
+      "dependencies": {
+        "angular": ">=1.3.x",
+        "angular-sanitize": ">=1.4.x",
+        "font-awesome": ">=4.0.x",
+        "rangy": "~1.3.0"
+      }
+    },
+    "Sortable": {
+      "main": [
+        "Sortable.js",
+        "ng-sortable.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~v3.3.7",
+    "angular": "~1.4.8"
+  }
+}

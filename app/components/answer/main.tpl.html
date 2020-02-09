@@ -1,0 +1,158 @@
+<lnc-portlet class="light">
+    <portlet-caption>
+        <span class="caption-subject bold uppercase"> Answer -></span>
+        <span><strong> {{amc.questionData.content}} </strong></span>
+        <!--{{amc.faceBookRp}}-->
+    </portlet-caption>
+    <portlet-body>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <text-angular ng-model="amc.answer.content"> </text-angular>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <question-filter-data ng-model="amc.questionData" add="amc.addDataFilterToEdit(data)"></question-filter-data>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" lnc-loading="{{amc.isLoading}}">
+                <div class="col-md-7">
+                    <label> Canvas </label>
+                    <br>
+                    <canvas id="canvas2" width="700" height="367" style="border: 1px solid"></canvas>
+                    <canvas id="canvasImgSys" width="700" height="367" style="border: 1px solid; display: none"></canvas>
+                    <br>
+                    <div class="form-group col-md-2">
+                        <label> Color </label>
+                        <div id="cp2" class="input-group colorpicker-component">
+                            <input type="text" value="#00AABB" class="form-control" />
+                            <span class="input-group-addon"><i></i></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label> Opacity </label>
+                        <input type="text" data-ng-model="amc.options.opacity"
+                               data-ng-change="amc.updateOpt('opacity', amc.options.opacity)"
+                               class="form-control" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label> Align </label>
+                        <div class="form-inline">
+                            <button type="button" class="btn btn-default btn-sm"
+                                    data-ng-click="amc.updateOpt('textAlign', 'left')">Left
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm"
+                                    data-ng-click="amc.updateOpt('textAlign','center')">Center
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm"
+                                    data-ng-click="amc.updateOpt('textAlign', 'right')">Right
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <button type="button" class="btn btn-default"
+                                data-ng-click="amc.canvasRemoveObj()">Remove Object
+                        </button>
+
+                        <button type="button" class="btn btn-default"
+                                data-ng-click="amc.canvasRemoveAllObj()">Remove All
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label"> Filter Result </label>
+                            <div class="form-group">
+                                <textarea name="description" class="form-control"
+                                          data-placeholder="result"
+                                          required data-ng-model="amc.textFilter"
+                                          style="width: 100%; height: 8em" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group form-inline">
+                                <lnc-select data-ng-model="amc.filterType" name="filterTypeOpts"
+                                            data-ng-change="amc.addToEdit(amc.filterType)"
+                                            placeholder="Select Filter Type" allow-clear="true"
+                                            required
+                                            options="amc.filterTypeOpts">
+                                    <item id="id" value="id">
+                                        <div class="row">
+                                            <div class="col-md-12 bold">{{name}}</div>
+                                        </div>
+                                    </item>
+                                    <choose>
+                                        {{name}}
+                                    </choose>
+                                </lnc-select>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <button type="button" class="btn btn-default"
+                                    data-ng-if="amc.textFilter && amc.filterType != null"
+                                    data-ng-click="amc.addResultToCanvas(amc.textFilter, amc.filterType)">Add Canvas </button>
+                            <btn-choose-media ng-model="imageId" callback="amc.addImageSys(data)"> </btn-choose-media>
+
+                            <!--<button type="button" class="btn btn-default" data-ng-click="amc.openPopupFile()">Add Image Sys</button>-->
+                            <input type="file" id="imageSys" style="display: none" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea name="description" class="form-control"
+                                          data-placeholder="result"
+                                          required data-ng-model="amc.faceData"
+                                          style="width: 100%; height: 3em" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <fb-api data-ng-model="amc.fbField"
+                                        facebook-code = "amc.answer.facebookCode"
+                                        call-to-output="amc.addToFaceDataEdit(data)"></fb-api>
+                            </div>
+                            <div class="form-inline">
+                                <button type="button" class="btn btn-default"
+                                        data-ng-if="amc.fbField"
+                                        data-ng-click="amc.addFbToCanvas(amc.fbField, amc.faceData)">Add Canvas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="form-actions">
+                    <lnc-btn-save type="button" data-ng-click="amc.save()"></lnc-btn-save>
+                    <answer-preview data-ng-model="amc.answer"> </answer-preview>
+                    <lnc-btn-back data-ui-sref="cms.question.main"></lnc-btn-back>
+                </div>
+
+            </div>
+        </div>
+    </portlet-body>
+</lnc-portlet>
+

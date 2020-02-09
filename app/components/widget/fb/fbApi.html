@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <lnc-select data-ng-model="fb.fbField" name="fbField"
+                    placeholder="Select FB Field" allow-clear="true"
+                    data-ng-disabled="!fb.isLogin"
+                    data-ng-change="fb.getData(fb.fbField)"
+                    options="fb.fbFields">
+            <item id="id" value="">
+                <div class="row">
+                    <div class="col-md-12 bold">{{key}}</div>
+                </div>
+            </item>
+            <choose>
+                {{key}}
+            </choose>
+        </lnc-select>
+        <br>
+        <button type="button" class="btn btn-default"
+                data-ng-if="!fb.isLogin"
+                data-ng-click="fb.login()">Login</button>
+    </div>
+</div>

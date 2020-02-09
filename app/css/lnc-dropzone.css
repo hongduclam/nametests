@@ -1,0 +1,65 @@
+.dropzone-wrapper{
+    margin: 0px;
+    position: relative;
+    height: 450px;
+}
+
+.dropzone{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.dropzone .dz-message{
+    opacity: 0.4;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropzone .dz-message span, .dropzone .dz-message span i {
+    font-size: 20px;
+}
+
+.dropzone .progress {
+	height: 5px;
+    margin-bottom: 0px;
+}
+
+.dropzone .previewsContainer .dz-selected .preview {
+    background-color: #89C4F4;
+}
+
+.dropzone .dz-image-preview{
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dropzone .preview *:hover{
+    cursor: pointer;
+}
+
+.dropzone .preview .progress{
+    display: none;
+}
+
+.dropzone .dz-processing .preview .progress{
+    display: block;
+}
+
+.dropzone-wrapper .mCSB_outside + .mCSB_scrollTools {
+    right: -10px;
+}

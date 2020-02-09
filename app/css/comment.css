@@ -1,0 +1,49 @@
+.comment .commentWrapper {
+    position: relative;
+    height: 20em;
+    margin: 4px;
+}
+
+.comment .general-item-list > .item > .item-head > .item-details {
+    width: 100%
+}
+
+.comment .general-item-list > .item > .item-head > .item-details > .item-pic {
+    float: left;
+}
+
+.comment .general-item-list > .item > .item-head > .item-details > .item-info {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #8496a7;
+}
+
+.comment .general-item-list > .item > .item-body {
+    color: #555555;
+}
+
+.comment.portlet.light {
+    padding: 10px;
+}
+
+.comment.portlet .portlet-title {
+    margin-bottom: 0px;
+}
+
+.comment.portlet .portlet-body {
+    padding-top: 0px;
+}
+
+/* Using for <comment-activity>*/
+.feeds li .col2 {
+    float: left;
+    width: 80px;
+    margin-left: -80px;
+}
+
+.feeds li .col2 > .date {
+    padding: 5px 5px 0px 0px;
+    text-align: right;
+    font-style: italic;
+    color: #c1cbd0;
+}

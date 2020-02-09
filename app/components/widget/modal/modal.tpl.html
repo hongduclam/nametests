@@ -1,0 +1,19 @@
+<div class="modal fade {{::type}}" data-modal="{{::id}}" role="dialog" aria-labelledby="{{::id}}">
+    <div class="modal-dialog {{::size}}">
+        <div class="modal-content">
+            <div class="portlet box">
+                <div class="portlet-title">
+                    <div class="caption">
+                        {{::icon}}
+                        <span class="caption-subject bold uppercase"> {{::title}} </span>
+                        <span class="caption-helper">{{::subtitle}}</span>
+                    </div>
+                    <div class="actions">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                </div>
+                <div class="portlet-body">{{::content}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<li class="dropdown dropdown-extended dropdown-dark dropdown-notification">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-bell-o"></i> <span class="badge badge-default" ng-if="notifyCtrl.pending"> {{notifyCtrl.pending}} </span>
+    </a>
+    <ul class="dropdown-menu pull-left">
+        <li class="external">
+            <h3>
+                &nbsp;
+            </h3>
+            <a data-ui-sref="erp.log">View all</a>
+        </li>
+        <li>
+            <div class="notification-wrapper" lnc-scroll="" lnc-loading="{{notifyCtrl.isLoading}}">
+                <ul class="scrollbar-macosx dropdown-menu-list " data-handle-color="#637283">
+                    <li data-ng-repeat="event in notifyCtrl.events track by event.id">
+                        <log-view item="event"></log-view>
+                    </li>
+                </ul>
+                <button class="btn default" ng-if="notifyCtrl.canLoadMore">Load More</button>
+            </div>
+        </li>
+    </ul>
+</li>

@@ -1,0 +1,128 @@
+/*
+  Flaticon icon font: Flaticon
+  Creation date: 08/07/2016 11:52
+  */
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.eot");
+    src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Flaticon.woff") format("woff"),
+    url("../fonts/Flaticon.ttf") format("truetype"),
+    url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+
+.ai {
+    display: inline-block;
+    font: normal normal normal 14px/1 Flaticon;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.ai-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+
+.ai-2x {
+    font-size: 2em;
+}
+
+.ai-3x {
+    font-size: 3em;
+}
+
+.ai-4x {
+    font-size: 4em;
+}
+
+.ai-5x {
+    font-size: 5em;
+}
+
+.ai-aw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.ai-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+
+.ai-ul > li {
+    position: relative;
+}
+
+.ai-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+}
+
+.ai-li.ai-lg {
+    left: -1.85714286em;
+}
+
+.ai-border {
+    padding: .2em .25em .15em;
+    border: solid 0.08em #eeeeee;
+    border-radius: .1em;
+}
+
+/** ICON Define **/
+
+.ai-accountant:before { content: "\f100"; }
+.ai-bank:before { content: "\f101"; }
+.ai-bank-o:before { content: "\f102"; }
+.ai-branch:before { content: "\f103"; }
+.ai-cash-flow:before { content: "\f104"; }
+.ai-category:before { content: "\f105"; }
+.ai-client-supplier:before { content: "\f106"; }
+.ai-company:before { content: "\f107"; }
+.ai-contract:before { content: "\f108"; }
+.ai-currency-configure:before { content: "\f109"; }
+.ai-document-export:before { content: "\f10a"; }
+.ai-document-holder:before { content: "\f10b"; }
+.ai-document-inner-input:before { content: "\f10c"; }
+.ai-document-inner-output:before { content: "\f10d"; }
+.ai-document-input:before { content: "\f10e"; }
+.ai-document-output:before { content: "\f10f"; }
+.ai-documents:before { content: "\f110"; }
+.ai-documents-1:before { content: "\f111"; }
+.ai-file-check:before { content: "\f112"; }
+.ai-files-o:before { content: "\f113"; }
+.ai-folder:before { content: "\f114"; }
+.ai-group:before { content: "\f115"; }
+.ai-inventory:before { content: "\f116"; }
+.ai-percentage:before { content: "\f117"; }
+.ai-person:before { content: "\f118"; }
+.ai-product:before { content: "\f119"; }
+.ai-product-detail:before { content: "\f11a"; }
+.ai-product-metadata:before { content: "\f11b"; }
+.ai-product-type:before { content: "\f11c"; }
+.ai-purchase:before { content: "\f11d"; }
+.ai-quotation:before { content: "\f11e"; }
+.ai-sale:before { content: "\f11f"; }
+.ai-sale-quotation:before { content: "\f120"; }
+.ai-saleman:before { content: "\f121"; }
+.ai-system-user:before { content: "\f122"; }
+.ai-tax:before { content: "\f123"; }
+.ai-warehouse:before { content: "\f124"; }
+.ai-warranty:before { content: "\f125"; }

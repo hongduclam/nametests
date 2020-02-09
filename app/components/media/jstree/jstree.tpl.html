@@ -1,0 +1,32 @@
+<div class="jstree-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn-group">
+                <button class="btn btn-info btn-sm" data-ng-click="selectRoot()">
+                    <i class="fa fa-home fw"></i>
+                </button>
+                <button class="btn btn-primary btn-sm" data-ng-click="refresh()">
+                    <i class="fa fa-refresh fw"></i>
+                </button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-primary btn-sm" data-ng-click="create()" data-ng-if="perms.CREATE">
+                    <i class="fa fa-folder fw"></i>
+                </button>
+                <button class="btn btn-warning btn-sm" data-ng-click="edit()" data-ng-if="perms.UPDATE">
+                    <i class="fa fa-pencil fw"></i>
+                </button>
+                <button class="btn btn-danger btn-sm" data-ng-click="delete()" data-ng-if="perms.DELETE">
+                    <i class="fa fa-trash fw"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jstree-wrapper">
+                <div class="jstree"></div>
+            </div>
+        </div>
+    </div>
+</div>

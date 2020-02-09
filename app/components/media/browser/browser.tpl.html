@@ -1,0 +1,47 @@
+<div class="row browser">
+    <div class="col-md-3 col-sm-5">
+        <lnc-tree></lnc-tree>
+    </div>
+    <div class="col-md-9 col-sm-7">
+        <div class="row" style="padding-bottom: 2px">
+            <div class="col-md-8">
+                <div class="path">
+                    Home &nbsp;<i class="fa fa-caret-right font-blue"></i>
+                    <span data-ng-bind-html="bc.path"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <span data-ng-if="bc.totalFilesSelected == 1">{{bc.totalFilesSelected}} file select.</span>
+                <span data-ng-if="bc.totalFilesSelected > 1">{{bc.totalFilesSelected}} files select.</span>
+
+                <div class="btn-group pull-right">
+                    <button class="btn btn-info btn-sm" data-ng-if="bc.totalFilesSelected == 1"
+                            data-ng-click="bc.download()">
+                        <i class="fa fa-download fw"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm" data-ng-if="bc.totalFilesSelected >= 1"
+                            data-ng-click="bc.delete()">
+                        <i class="fa fa-trash fw"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-ng-click="bc.showChooseFiles()"
+                            data-ng-if="bc.perms.CREATE">
+                        <i class="fa fa-upload"></i>&nbsp;Upload
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row" lnc-loading="{{bc.isLoading}}">
+            <div class="col-md-12">
+                <div class="dropzone-wrapper"
+                     lnc-scroll="{autoHideScrollbar: true, alwaysShowScrollbar: 0, scrollInertia: 100, scrollbarPosition: 'outside'}">
+                    <div class="dropzone">
+                        <div class="dz-message">
+                            <span><i class="fa fa-cloud-upload font-green"></i>&nbsp;Click or Drag & Drop to upload files.</span>
+                        </div>
+                        <div class="row previewsContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

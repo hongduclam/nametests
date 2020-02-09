@@ -1,0 +1,20 @@
+<div class="modal fade {{::type}}" data-modal="{{::id}}" data-backdrop="static" role="dialog" aria-hidden="true">
+    <div class="modal-dialog {{::size}}">
+        <div class="modal-content">
+            <div class="portlet box">
+                <div class="portlet-title">
+                    <div class="caption">
+                        {{::icon}}
+                        <span class="caption-subject bold uppercase"> {{::title}} </span>
+                        <span class="caption-helper">{{::subtitle}}</span>
+                    </div>
+                    <div class="actions">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    {{::tabNavigation}}
+                </div>
+                <div class="portlet-body">{{::tabContent}}</div>
+            </div>
+        </div>
+    </div>
+</div>

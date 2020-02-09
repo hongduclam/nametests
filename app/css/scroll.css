@@ -1,0 +1,80 @@
+.lnc-scroll {
+    max-height: 200px;
+}
+
+.lnc-carousel {
+    width: 80%;
+    margin: 0px auto;
+    max-width: 800px;
+}
+
+.lnc-carousel > .lnc-preview {
+    height: 500px;
+    box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+    background: white;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+
+.lnc-carousel > .lnc-preview > img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.lnc-carousel > .lnc-thumbnails {
+    width: 100%;
+    overflow: hidden;
+    margin: 1em auto 0;
+
+}
+
+.lnc-carousel > .lnc-thumbnails ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.lnc-carousel > .lnc-thumbnails ul li {
+    width: 72px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.lnc-carousel > .lnc-thumbnails ul li.item img {
+    opacity: 0.5;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+.lnc-carousel > .lnc-thumbnails ul li.item:hover img {
+    opacity: 1;
+    border-color: #3399ff;
+}
+
+.lnc-carousel > .lnc-thumbnails ul li.item.active img {
+    border-color: #3399ff;
+    opacity: 1;
+    cursor: default;
+}
+
+.lnc-carousel .mCSB_horizontal.mCSB_inside > .mCSB_container {
+    margin-bottom: 0px;
+}
+
+.mCSB_outside + .mCSB_scrollTools {
+    right: -15px;
+}

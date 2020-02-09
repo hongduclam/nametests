@@ -1,0 +1,37 @@
+.media-table-tooltip {
+    border: none;
+    font-size: 1em
+}
+
+.media-table-tooltip tr > th {
+    padding: 2px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.media-table-tooltip tr > td {
+    padding: 2px;
+}
+
+.media-table-tooltip tr > td:first-child {
+    width: 30%;
+}
+
+.media-table-tooltip tr > td:last-child {
+    text-align: left;
+}
+
+.browser .jstree-wrapper {
+    height: auto;
+    padding: 2px;
+    max-height: 450px;
+    overflow: auto;
+    width: 100%;
+}
+
+.browser .path {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+}
